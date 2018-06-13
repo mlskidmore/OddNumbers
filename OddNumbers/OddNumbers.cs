@@ -4,6 +4,9 @@ namespace OddNumbers
 {
     class OddNumbers
     {
+        public int lowerBound { get; set; }
+        public int upperBound { get; set; }
+
         public void getLowerBound(ref int lb)
         {
             Console.WriteLine("Enter an integer between 1 and 100,000:");
@@ -13,6 +16,7 @@ namespace OddNumbers
             {
                 Console.WriteLine("You must enter an integer between 1 and 100,000:");
                 lb = Convert.ToInt32(Console.ReadLine());
+                lowerBound = lb;
             }
         }
         public void getUpperBound(ref int rb, int lb)
@@ -24,6 +28,7 @@ namespace OddNumbers
             {
                 Console.WriteLine("You must enter an integer between 1 and 100,000 and greater than the lower bound:");
                 rb = Convert.ToInt32(Console.ReadLine());
+                upperBound = rb;
             }
         }
 

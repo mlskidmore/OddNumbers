@@ -4,6 +4,7 @@ namespace OddNumbers
 {
     class Program
     {
+        // Given a lower and upper bound, find all odd numbers and return in an array
         static void Main(string[] args)
         {
             int lowerBound = 0, upperBound = 0;
@@ -12,17 +13,24 @@ namespace OddNumbers
 
             try
             {
+                // Get lower and upper bounds from the user
                 on.getLowerBound(ref lowerBound);
                 on.getUpperBound(ref upperBound, lowerBound);
 
                 Console.WriteLine("Lower bound: " + lowerBound);
                 Console.WriteLine("Upper bound: " + upperBound);
 
+                // Declare array to hold only odd numbers
                 int[] oddNumbers = new int[(lowerBound + upperBound)/2];
 
+                // Get the odd numbers
                 on.getOddNumbers(ref oddNumbers, lowerBound, upperBound);
 
+                // Print odd numbers
                 on.printOddNumbers(oddNumbers);
+
+                Console.WriteLine("Lower bound: " + on.lowerBound);
+                Console.WriteLine("Upper bound: " + on.upperBound);
 
                 Console.ReadLine();
             }
