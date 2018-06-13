@@ -32,8 +32,19 @@ namespace OddNumbers
             }
         }
 
-        public void getOddNumbers(ref int[] oddNums, int lb, int rb)
+        public int getOddNumberCount(int lb, int rb)
         {
+            // Size the array
+            int counter = 0;
+            for (int i = lb; i <= rb; i++)
+            {
+                if (i % 2 != 0)
+                    counter++;
+            }
+            return counter;
+        }
+        public void getOddNumbers(ref int[] oddNums, int lb, int rb)
+        {            
             int ii = 0;
 
             for (int i = lb; i <= rb; i++)

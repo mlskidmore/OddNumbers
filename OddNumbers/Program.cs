@@ -20,8 +20,11 @@ namespace OddNumbers
                 Console.WriteLine("Lower bound: " + lowerBound);
                 Console.WriteLine("Upper bound: " + upperBound);
 
+                // Get array length
+                int arraySize = on.getOddNumberCount(lowerBound, upperBound);
+
                 // Declare array to hold only odd numbers
-                int[] oddNumbers = new int[(lowerBound + upperBound)/2];
+                int[] oddNumbers = new int[arraySize];
 
                 // Get the odd numbers
                 on.getOddNumbers(ref oddNumbers, lowerBound, upperBound);
