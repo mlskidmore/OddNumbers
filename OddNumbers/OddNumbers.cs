@@ -11,6 +11,7 @@ namespace OddNumbers
         {
             Console.WriteLine("Enter an integer between 1 and 100,000:");
             lb = Convert.ToInt32(Console.ReadLine());
+            lowerBound = lb;
 
             while (lb < 1 || lb > 100000)
             {
@@ -23,6 +24,7 @@ namespace OddNumbers
         {
             Console.WriteLine("Enter an integer between 1 and 100,000 and greater than the lower bound:");
             rb = Convert.ToInt32(Console.ReadLine());
+            upperBound = rb;
 
             while (rb < lb || rb > 100000)
             {
